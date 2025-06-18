@@ -179,11 +179,11 @@ John Conway´s new solitaire game life”, Scientific American 223, Oct,
 
 
 
-} /\* fim-wall_time \*/
+> } /\* fim-wall_time \*/
 
-double wall_time(void);
+> double wall_time(void);
 
-void UmaVida(int\* tabulIn, int\* tabulOut, int tam) { int i, j, vizviv;
+> void UmaVida(int\* tabulIn, int\* tabulOut, int tam) { int i, j, vizviv;
 
 > for (i=1; i\<=tam; i++) { for (j= 1; j\<=tam; j++) {
 >
@@ -204,14 +204,14 @@ void UmaVida(int\* tabulIn, int\* tabulOut, int tam) { int i, j, vizviv;
 >
 > tabulOut\[ind2d(i,j)\] = tabulIn\[ind2d(i,j)\]; } /\* fim-for \*/
 
-} /\* fim-for \*/ } /\* fim-UmaVida \*/
+> } /\* fim-for \*/ } /\* fim-UmaVida \*/
 
-// DumpTabul: Imprime trecho do tabuleiro entre
+> // DumpTabul: Imprime trecho do tabuleiro entre
 
-// as posicoes (first,first) e (last,last)
+> // as posicoes (first,first) e (last,last)
 
-void DumpTabul(int \* tabul, int tam, int first, int last, char\* msg){
-int i, ij;
+> void DumpTabul(int \* tabul, int tam, int first, int last, char\* msg){
+> int i, ij;
 
 > printf("%s; Dump posições \[%d:%d, %d:%d\] de tabuleiro %d x %d\n", \\
 > msg, first, last, first, last, tam, tam);
@@ -224,13 +224,13 @@ int i, ij;
 >
 > printf("\n"); }
 
-for (i=first; i\<=last; i++) printf("="); printf("=\n"); } /\*
-fim-DumpTabul \*/
+> for (i=first; i\<=last; i++) printf("="); printf("=\n"); } /\*
+> fim-DumpTabul \*/
 
-// InitTabul: Inicializa tabulIn com veleiro no canto superior esquerdo
-e // tabulOut com celulas mortas
+> // InitTabul: Inicializa tabulIn com veleiro no canto superior esquerdo
+> e // tabulOut com celulas mortas
 
-void InitTabul(int\* tabulIn, int\* tabulOut, int tam){ int ij;
+> void InitTabul(int\* tabulIn, int\* tabulOut, int tam){ int ij;
 
 > for (ij=0; ij\<(tam+2)\*(tam+2); ij++) { tabulIn\[ij\] = 0;
 >
@@ -242,12 +242,12 @@ void InitTabul(int\* tabulIn, int\* tabulOut, int tam){ int ij;
 > tabulIn\[ind2d(3,1)\] = 1; tabulIn\[ind2d(3,2)\] = 1;
 > tabulIn\[ind2d(3,3)\] = 1;
 
-} /\* fim-InitTabul \*/
+> } /\* fim-InitTabul \*/
 
-// Correto: Verifica se a configuracao final do tabuleiro
+> // Correto: Verifica se a configuracao final do tabuleiro
 
-// está correta ou não (veleiro no canto inferior direito) int
-Correto(int\* tabul, int tam){
+> // está correta ou não (veleiro no canto inferior direito) int
+> Correto(int\* tabul, int tam){
 
 > int ij, cnt;
 >
@@ -259,9 +259,9 @@ Correto(int\* tabul, int tam){
 > tabul\[ind2d(tam-1,tam )\] && tabul\[ind2d(tam ,tam-2)\] &&
 > tabul\[ind2d(tam ,tam-1)\] && tabul\[ind2d(tam ,tam )\]);
 
-} /\* fim-Correto \*/
+> } /\* fim-Correto \*/
 
-int main(void) {
+> int main(void) {
 
 > int pow, i, tam, \*tabulIn, \*tabulOut; char msg\[9\];
 >
@@ -298,5 +298,5 @@ int main(void) {
 >
 > return 0;
 
-} /\* fim-main \*/
+> } /\* fim-main \*/
 ```
